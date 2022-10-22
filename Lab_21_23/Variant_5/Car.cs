@@ -15,7 +15,7 @@ namespace Variant_5
 		void Show();
 	}
 	
-	public class Car
+	public class Car : ICar
 	{
 		public Car(ECar vendor, int speedMax)
 		{
@@ -28,7 +28,7 @@ namespace Variant_5
 		
 		public int GetSpeed() => _speedMax;
 
-		public string GetModel() => _vendor.ToString();
+		public ECar GetVendor() => _vendor;
 
 		public void Go(string place) => Console.WriteLine($"{_vendor} went to {place}");
 
